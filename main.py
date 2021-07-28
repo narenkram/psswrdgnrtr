@@ -19,18 +19,18 @@ print("Enter 5 to generate a symbols only password")
 user_preferred_option = int(input())
 
 
-def main():
+def pwd_option():
     if user_preferred_option == 1:
         make_mixed_pwd(default_limit)
-    if user_preferred_option == 2:
+    elif user_preferred_option == 2:
         print("Please enter a number limit for your password")
         pwd_limit = int(input())
         user_preferred_limit(pwd_limit)
-    if user_preferred_option == 3:
+    elif user_preferred_option == 3:
         make_letters_pwd(default_limit)
-    if user_preferred_option == 4:
+    elif user_preferred_option == 4:
         make_digits_pwd(default_limit)
-    if user_preferred_option == 5:
+    elif user_preferred_option == 5:
         make_symbols_pwd(default_limit)
     else:
         print("Not a valid input, try again")
@@ -73,4 +73,4 @@ def make_symbols_pwd(default_limit):
 
 
 if __name__ == "__main__":
-    main()
+    pwd_option()
