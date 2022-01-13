@@ -1,5 +1,5 @@
-# Python Password Generator
-Password Generator written using Python. I'm creating an offline & online password generator.
+# psswrdgnrtr
+Password Generator.
 
 ### To-Do
 - [x] Multi-option Password
@@ -25,9 +25,6 @@ Password Generator written using Python. I'm creating an offline & online passwo
 1. Install Python IDLE
 2. Open with "Edit with IDLE"
 3. Select "Run Module" from Run menu
-
-## Design
-I'm designing the ui for web app on my free time, if that goes well, later planned to design the windows app UI with Tkinter.
 
 ## Development & Contribution
 Please feel free to contribute.

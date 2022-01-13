@@ -15,15 +15,166 @@
         <section class="py-5">
             <div class="row">
                 <div class="col-auto text-start">
-                    <h1>I'm still designing this site, <br />but you can use the program with py-interpreter now</h1>
-                    <h2><a href="https://github.com/narenkram/password-generator">Download source code</a></h2>
+                    <h1>🔑 p<span class="Vowel">a</span>ssw<span class="Vowel">o</span>rd-g<span
+                            class="Vowel">e</span>n<span class="Vowel">e</span>r<span class="Vowel">a</span>t<span
+                            class="Vowel">o</span>r
+                    </h1>
                     <small>memory hack to remember psswrdgnrtr.com - type passwordgenerator without vowels</small>
                 </div>
             </div>
         </section>
 
+
+        <section class="py-5">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_limit" class="col-form-label">Password Length</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="number" name="psswrd_limit" id="psswrd_limit" value="50" class="form-control"
+                                aria-describedby="passwordHelpInline">
+                        </div>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                                Recommended character length is 50.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_numbers" class="col-form-label">Include Numbers</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_numbers" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( e.g. 123456 )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_lowercase" class="col-form-label">Include Lowercase</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_lowercase" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( e.g. abcdefgh )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_uppercase" class="col-form-label">Include Uppercase</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_uppercase" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( e.g. ABCDEFGH )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_begin" class="col-form-label">Start with a letter</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_begin" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( don't begin with a number or symbol )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_symbols" class="col-form-label">Include Symbols</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_symbols" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                !";#$%&'()*+,-./:;<=>?@[]^_`{|}~
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_no_similar" class="col-form-label">No Similar Characters</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_no_similar" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( don't use characters like i, l, 1, L, o, 0, O, etc. )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_no_duplicate" class="col-form-label">No Duplicate Characters</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_no_duplicate" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( don't use the same character more than once )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_no_sequential" class="col-form-label">No Sequential Characters</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_no_sequential" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( don't use sequential characters, e.g. abc, 123 )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="psswrd_no_similar" class="col-form-label">No Similar Characters</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="checkbox" name="psswrd_no_similar" class="form-check-input" id="">
+                        </div>
+                        <div class="col-auto">
+                            <span id="" class="form-text">
+                                ( don't use characters like i, l, 1, L, o, 0, O, etc. )
+                            </span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary">Generate</button>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="psswrd" placeholder="Hit the Generate btn!">
+                        <button class="btn btn-outline-secondary" type="button" data-clipboard-action="copy" data-clipboard-target="#psswrd">Copy</button>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
         <!-- <section>
             <p>Please enable ads to support keep this project alive.</p>
+             <h2><a href="https://github.com/narenkram/password-generator">Download source code</a></h2>
         </section> -->
     </main>
 </body>
@@ -34,5 +185,9 @@
     html,
     body {
         background-color: #eee;
+    }
+
+    .Vowel {
+        color: tomato;
     }
 </style>
