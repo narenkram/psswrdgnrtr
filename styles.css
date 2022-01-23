@@ -1,0 +1,147 @@
+@media (prefers-color-scheme: light) {
+
+    html,
+    body {
+        color: #161616;
+        background-color: #eeeeee;
+    }
+
+    small {
+        color: rgb(29, 29, 29);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html,
+    body {
+        color: #eeeeee;
+        background-color: #161616;
+    }
+
+    small {
+        color: #eeeeee;
+    }
+}
+
+.Vowel {
+    color: tomato;
+}
+
+.Psswrd {
+    position: relative;
+    display: flex;
+}
+
+.Psswrd__view {
+    width: 60vw;
+    height: 100px;
+    border-radius: 4px;
+    border: 0;
+    padding: 16px;
+    text-align: center;
+}
+
+.Psswrd__copy {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.PsswrdOptions {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+/* The PsswrdOption */
+.PsswrdOption {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 4px;
+}
+
+.PsswrdOption:hover {
+    background-color: #fff;
+}
+
+/* Hide the browser's default checkbox */
+.PsswrdOption .PsswrdOption__inputbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+/* Create a custom checkbox */
+.PsswrdOption__label--checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.PsswrdOption:hover .PsswrdOption__label--checkbox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.PsswrdOption input:checked~.PsswrdOption__label--checkbox {
+    background-color: #2196F3;
+}
+
+/* Create the PsswrdOption__label--checkbox/indicator (hidden when not checked) */
+.PsswrdOption__label--checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the PsswrdOption__label--checkbox when checked */
+.PsswrdOption .PsswrdOption__inputbox:checked~.PsswrdOption__label--checkbox:after {
+    display: block;
+}
+
+/* Style the PsswrdOption__label--checkbox/indicator */
+.PsswrdOption .PsswrdOption__label--checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.PsswrdOption__label {}
+
+.PsswrdOption__label--helper {}
+
+
+.overlay{
+    position: absolute;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+}
+.container{
+    display: none;
+}
