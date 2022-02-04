@@ -40,6 +40,7 @@
     border: 0;
     padding: 16px;
     text-align: center;
+    font-size: 22px;
 }
 
 .Psswrd__copy {
@@ -55,9 +56,10 @@
 
 /* The PsswrdOption */
 .PsswrdOption {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: relative;
-    padding-left: 35px;
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
@@ -68,70 +70,28 @@
 }
 
 .PsswrdOption:hover {
-    background-color: #fff;
+    background-color: #e2e2e2;
 }
 
-/* Hide the browser's default checkbox */
 .PsswrdOption .PsswrdOption__inputbox {
-    position: absolute;
-    opacity: 0;
     cursor: pointer;
-    height: 100%;
-    width: 100%;
-    left: 0;
+    height: 30px;
+    width: 30px;
+    margin-right: 16px;
+}
+/* not working */
+.PsswrdOption input:checked .PsswrdOption__inputbox{
+    background-color: tomato;
+    border-color: tomato;
 }
 
-/* Create a custom checkbox */
-.PsswrdOption__label--checkbox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-}
-
-/* On mouse-over, add a grey background color */
-.PsswrdOption:hover .PsswrdOption__label--checkbox {
-    background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.PsswrdOption input:checked~.PsswrdOption__label--checkbox {
-    background-color: #2196F3;
-}
-
-/* Create the PsswrdOption__label--checkbox/indicator (hidden when not checked) */
-.PsswrdOption__label--checkbox:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the PsswrdOption__label--checkbox when checked */
-.PsswrdOption .PsswrdOption__inputbox:checked~.PsswrdOption__label--checkbox:after {
-    display: block;
-}
-
-/* Style the PsswrdOption__label--checkbox/indicator */
-.PsswrdOption .PsswrdOption__label--checkbox:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
 
 .PsswrdOption__label {}
 
 .PsswrdOption__label--helper {}
 
 
-.Psswrd__copy{
+.Psswrd__copy {
     position: relative;
     display: inline-block;
 }
@@ -164,12 +124,12 @@
     border-color: #555 transparent transparent transparent;
 }
 
-.Psswrd__copy:hover .Psswrd__tooltip{
+.Psswrd__copy:hover .Psswrd__tooltip {
     visibility: visible;
     opacity: 1;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     background: #000;
     width: 100vw;
@@ -180,6 +140,7 @@
     left: 0;
     padding: 30px;
 }
-.container{
+
+/* .container{
     display: none;
-}
+} */
