@@ -52,6 +52,7 @@
 .PsswrdOptions {
     position: relative;
     margin-bottom: 16px;
+    opacity: 0.3;
 }
 
 /* The PsswrdOption */
