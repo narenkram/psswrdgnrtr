@@ -64,9 +64,9 @@
     width: 21.5px;
     color: tomato;
     animation-name: LoopText;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     display: inline-block;
     opacity: 1;
     animation-direction: reverse;
@@ -76,9 +76,9 @@
     content: ".com";
     position: absolute;
     animation-name: LoopTextURL;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     opacity: 0;
     animation-direction: reverse;
 }
@@ -91,17 +91,27 @@
     }
 
     25% {
+        width: 0px;
+        opacity: 0;
+        display: none;
+    }
+
+    50% {
+        width: 0px;
+        opacity: 0;
+        display: none;
+    }
+
+    75% {
         width: 21.5px;
         opacity: 1;
         display: inline-block;
     }
 
-    50% {}
-
     100% {
-        width: 0px;
-        opacity: 0;
-        display: none;
+        width: 21.5px;
+        opacity: 1;
+        display: inline-block;
     }
 }
 
@@ -112,16 +122,23 @@
     }
 
     25% {
+        opacity: 1;
+        display: block;
+    }
+
+    50% {
+        opacity: 1;
+        display: block;
+    }
+
+    75% {
         display: none;
         opacity: 0;
     }
 
-    50% {}
-
-
     100% {
-        opacity: 1;
-        display: block;
+        display: none;
+        opacity: 0;
     }
 }
 
