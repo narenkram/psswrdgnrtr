@@ -15,7 +15,7 @@ Password Generator.
     - [ ] Save My Preference
 - [ ] Cross Platform Support
     - [x] Web App
-    - [x] Linux terminal
+    - [x] Command Line
 
 ### How to build from source code (for main.py)
 1. Install Python IDLE
