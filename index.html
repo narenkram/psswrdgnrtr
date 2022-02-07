@@ -59,110 +59,119 @@
                         <button class="btn btn-lg btn-primary" onclick="generatePsswrd()">Generate</button>
                     </div>
 
-                    <div class="pt-5">
-                        <h3>Password Options</h3>
-                        <h4 class="text-secondary">Use options to customize password generation. <span
-                                style="color: tomato;">(Coming Soon)
-                            </span> </h4>
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <div class="pt-5">
+                                <h3>Password Options</h3>
+                                <h4 class="text-secondary">Use options to customize password generation.</h4>
+                                <small style="color: tomato;">(Coming Soon - below features still in-development)
+                                </small>
+                            </div>
+
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_limit" class="PsswrdOption">
+                                    <input class="PsswrdOption__inputbox--range" name="psswrd_limit" id="psswrd_limit"
+                                        type="range" value="50" min="4" max="50"
+                                        oninput="this.nextElementSibling.value = this.value">
+                                    <output>50</output>
+                                    <span class="PsswrdOption__label">&nbsp;Password Length</span>
+                                    <span id="passwordHelpInline" class="PsswrdOption__helper">
+                                        &nbsp;(recommended character length is 50)
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_numbers" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_numbers" class="PsswrdOption__inputbox"
+                                        id="psswrd_numbers">
+                                    <span class="PsswrdOption__label">Include Numbers</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;(0-9)
+                                    </span>
+                                    <span class="PsswrdOption__label--checkbox">
+                                        <span class="PsswrdOption__checkmark"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_lowercase" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_lowercase" class="PsswrdOption__inputbox"
+                                        id="psswrd_lowercase">
+                                    <span class="PsswrdOption__label">Include Lowercase</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;(a-z)
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_uppercase" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_uppercase" class="PsswrdOption__inputbox"
+                                        id="psswrd_uppercase">
+                                    <span class="PsswrdOption__label">Include Uppercase</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;(A-Z)
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_letter_start" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_letter_start" class="PsswrdOption__inputbox"
+                                        id="psswrd_letter_start">
+                                    <span class="PsswrdOption__label">Start with a letter</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;(don't start with a number or symbol)
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_symbols" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_symbols" class="PsswrdOption__inputbox"
+                                        id="psswrd_symbols">
+                                    <span class="PsswrdOption__label">Include Symbols</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;!";#$%&'()*+,-./:;<=>?@[]^_`{|}~
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_no_similar" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_no_similar" class="PsswrdOption__inputbox"
+                                        id="psswrd_no_similar">
+                                    <span class="PsswrdOption__label">No Similar Characters</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;(characters like i, l, 1, L, o, 0, O)
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_no_duplicate" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_no_duplicate" class="PsswrdOption__inputbox"
+                                        id="psswrd_no_duplicate">
+                                    <span class="PsswrdOption__label">No Duplicate Characters</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;(won't be used more than once)
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="PsswrdOptions">
+                                <label for="psswrd_no_sequential" class="PsswrdOption">
+                                    <input type="checkbox" name="psswrd_no_sequential" class="PsswrdOption__inputbox"
+                                        id="psswrd_no_sequential">
+                                    <span class="PsswrdOption__label">No Sequential Characters</span>
+                                    <span id="" class="PsswrdOption__helper">
+                                        &nbsp;(like abcde or 12345)
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <img src="./halfgiraffe.gif" class="img-fluid FunnyGif rounded"
+                                alt="Animated Image of person remembering a password">
+                            <!-- image belongs to William Garratt or halfgiraffe.com -->
+                        </div>
                     </div>
 
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_limit" class="PsswrdOption">
-                            <input class="PsswrdOption__inputbox--range" name="psswrd_limit" id="psswrd_limit"
-                                type="range" value="50" min="4" max="50"
-                                oninput="this.nextElementSibling.value = this.value">
-                            <output>50</output>
-                            <span class="PsswrdOption__label">Password Length</span>
-                            <span id="passwordHelpInline" class="PsswrdOption__helper">
-                                Recommended character length is 50.
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_numbers" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_numbers" class="PsswrdOption__inputbox"
-                                id="psswrd_numbers">
-                            <span class="PsswrdOption__label">Include Numbers</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;(0-9)
-                            </span>
-                            <span class="PsswrdOption__label--checkbox">
-                                <span class="PsswrdOption__checkmark"></span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_lowercase" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_lowercase" class="PsswrdOption__inputbox"
-                                id="psswrd_lowercase">
-                            <span class="PsswrdOption__label">Include Lowercase</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;(a-z)
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_uppercase" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_uppercase" class="PsswrdOption__inputbox"
-                                id="psswrd_uppercase">
-                            <span class="PsswrdOption__label">Include Uppercase</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;(A-Z)
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_letter_start" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_letter_start" class="PsswrdOption__inputbox"
-                                id="psswrd_letter_start">
-                            <span class="PsswrdOption__label">Start with a letter</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;(don't start with a number or symbol)
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_symbols" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_symbols" class="PsswrdOption__inputbox"
-                                id="psswrd_symbols">
-                            <span class="PsswrdOption__label">Include Symbols</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;!";#$%&'()*+,-./:;<=>?@[]^_`{|}~
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_no_similar" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_no_similar" class="PsswrdOption__inputbox"
-                                id="psswrd_no_similar">
-                            <span class="PsswrdOption__label">No Similar Characters</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;(characters like i, l, 1, L, o, 0, O)
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_no_duplicate" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_no_duplicate" class="PsswrdOption__inputbox"
-                                id="psswrd_no_duplicate">
-                            <span class="PsswrdOption__label">No Duplicate Characters</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;(won't be used more than once)
-                            </span>
-                        </label>
-                    </div>
-                    <div class="PsswrdOptions">
-                        <label for="psswrd_no_sequential" class="PsswrdOption">
-                            <input type="checkbox" name="psswrd_no_sequential" class="PsswrdOption__inputbox"
-                                id="psswrd_no_sequential">
-                            <span class="PsswrdOption__label">No Sequential Characters</span>
-                            <span id="" class="PsswrdOption__helper">
-                                &nbsp;(like abcde or 12345)
-                            </span>
-                        </label>
-                    </div>
                 </div>
-            </div>
             </div>
         </section>
 

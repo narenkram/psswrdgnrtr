@@ -9,6 +9,10 @@
     small {
         color: rgb(29, 29, 29);
     }
+
+    .FunnyGif {
+        filter: invert(0);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +25,10 @@
 
     small {
         color: #eeeeee;
+    }
+
+    .FunnyGif {
+        filter: invert(1);
     }
 }
 
@@ -63,7 +71,6 @@
     align-items: center;
     position: relative;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -133,7 +140,7 @@
 }
 
 
-code a{
+code a {
     text-decoration: none;
 }
 
