@@ -1,5 +1,5 @@
 # psswrdgnrtr
-Password Generator.
+Free Password Generator, live at 🎯 [psswrdgnrtr.com](https://www.github.com) 
 
 ### To-Do
 - [x] Minimal Features
