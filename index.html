@@ -32,7 +32,7 @@
         <section class="py-5">
             <div class="row">
                 <div class="col-auto text-start">
-                    <h1>🔑 p<span class="Vowel">a</span>ssw<span class="Vowel">o</span>rd-g<span
+                    <h1>🔑 P<span class="Vowel">a</span>ssw<span class="Vowel">o</span>rd G<span
                             class="Vowel">e</span>n<span class="Vowel">e</span>r<span class="Vowel">a</span>t<span
                             class="Vowel">o</span>r
                     </h1>
@@ -40,7 +40,7 @@
             </div>
         </section>
 
-        <section class="py-5">
+        <section class="pt-5">
             <div class="row">
                 <div class="col-12">
 
@@ -48,17 +48,19 @@
                     <div class="Psswrd">
                         <input type="text" class="Psswrd__view" id="password" value="psswrd"
                             placeholder="Hit the Generate btn!">
-                        <button class="Psswrd__copy" onclick="copyPsswrd()" onmouseout="outFunc()">
+                        <button class="btn btn-outline-primary Psswrd__copy" onclick="copyPsswrd()" onmouseout="outFunc()">
                             <span class="Psswrd__tooltip" id="myTooltip">Copy to clipboard</span>
                             Copy
                         </button>
                     </div>
 
-                    <button class="btn btn-primary" onclick="generatePsswrd()">Generate</button>
+                    <div class="w-100 mt-3">
+                        <button class="btn btn-lg btn-primary" onclick="generatePsswrd()">Generate</button>
+                    </div>
 
                     <div class="pt-3">
                         <h3>Password Options</h3>
-                        <h4>Use options to customize password generation. <span style="color: tomato;">(Coming Soon)
+                        <h4 class="text-secondary">Use options to customize password generation. <span style="color: tomato;">(Coming Soon)
                             </span> </h4>
                     </div>
 
@@ -162,38 +164,40 @@
             </div>
         </section>
 
-        <section>
+        <section class="mt-5">
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <h5>🔒 100% Privacy</h5>
                     <p>
                         This website does not store passwords.
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <h5>⌨️ Open Source</h5>
                     <p>
-                        Source
-                        <a href="https://github.com/narenkram/psswrdgnrtr">code</a> available on GitHub.
+                        Source <code><a href="https://github.com/narenkram/psswrdgnrtr">code</a></code> available on
+                        GitHub
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h5>🎯 Ad-free Experience</h5>
+                    <p>
+                        This website is free from advertisments.
                     </p>
                 </div>
             </div>
 
         </section>
 
-        <section>
+        <section class="mt-5">
             <h5>💡 Usage Tips</h5>
-            <ul class="list-unstyled">
-                <li>memory hack to remember the URL - type passwordgenerator without vowels - psswrdgnrtr.com </li>
+            <ol class="UsageTips">
+                <li>Memory hack to remember the URL, type passwordgenerator without the vowels - psswrdgnrtr.com</li>
                 <li>Always use 50 character length password wherever possible</li>
-            </ul>
+            </ol>
         </section>
     </main>
 
-    <!-- <div class="overlay">
-        <div class="fs-1 text-white">in-development</div>
-        <div class="fs-2 text-white">This website is still in development, please check back later.</div>
-    </div> -->
 </body>
 
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"

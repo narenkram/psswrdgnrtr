@@ -41,6 +41,7 @@
     padding: 16px;
     text-align: center;
     font-size: 22px;
+    margin-right: 14px;
 }
 
 .Psswrd__copy {
@@ -80,8 +81,9 @@
     width: 30px;
     margin-right: 16px;
 }
+
 /* not working */
-.PsswrdOption input:checked .PsswrdOption__inputbox{
+.PsswrdOption input:checked .PsswrdOption__inputbox {
     background-color: tomato;
     border-color: tomato;
 }
@@ -130,18 +132,22 @@
     opacity: 1;
 }
 
-.overlay {
-    position: absolute;
-    background: #000;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 30px;
+
+code a{
+    text-decoration: none;
 }
 
-/* .container{
-    display: none;
-} */
+.UsageTips {}
+
+/* Bootstrap Overides */
+.btn, button {
+    box-shadow: none !important;
+}
+
+a {
+    color: #0a58ca;
+}
+
+a:hover {
+    color: tomato;
+}
