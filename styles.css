@@ -7,11 +7,20 @@
     }
 
     small {
-        color: rgb(29, 29, 29);
+        color: #0a58ca;
     }
 
     .FunnyGif {
         filter: invert(0);
+    }
+
+
+    a {
+        color: #0a58ca;
+    }
+
+    a:hover {
+        color: tomato;
     }
 }
 
@@ -24,11 +33,20 @@
     }
 
     small {
-        color: #eeeeee;
+        color: tomato;
     }
 
     .FunnyGif {
         filter: invert(1);
+    }
+
+
+    a {
+        color: tomato;
+    }
+
+    a:hover {
+        color: greenyellow;
     }
 }
 
@@ -152,9 +170,5 @@ code a {
 }
 
 a {
-    color: #0a58ca;
-}
-
-a:hover {
-    color: tomato;
+    text-decoration: none;
 }
