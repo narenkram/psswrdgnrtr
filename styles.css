@@ -61,7 +61,51 @@
 }
 
 .Vowel {
+    width: 25px;
     color: tomato;
+    animation-name: LoopText;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    opacity: 1;
+}
+
+.TheTitle::after {
+    content: ".com";
+    position: absolute;
+    animation-name: LoopTextURL;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+@keyframes LoopText {
+    0% {
+        color: red;
+        width: 25px;
+        opacity: 1;
+        display: inline-block;
+    }
+
+    100% {
+        color: blue;
+        width: 0px;
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes LoopTextURL {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+    }
 }
 
 .Psswrd {
@@ -171,6 +215,8 @@
 code a {
     text-decoration: none;
 }
+
+
 
 .UsageTips {}
 
