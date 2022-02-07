@@ -2,26 +2,22 @@
 Password Generator.
 
 ### To-Do
-- [x] Multi-option Password
-    - [x] ASCII Characters
-    - [x] Numbers
-    - [x] Symbols
-    - [x] Custom limit character
+- [x] Minimal Features
+    - [x] Generate mixed 50 Character password
+    - [ ] ASCII Characters
+    - [ ] Numbers
+    - [ ] Symbols
+    - [ ] Custom limit character
 - [ ] Advanced Options
     - [ ] No Similar Characters
     - [ ] No Duplicate Characters
     - [ ] No Sequential Characters
     - [ ] Save My Preference
 - [ ] Cross Platform Support
-    - [ ] Web App [Design User Interface]
-    - [ ] Windows App [Design User Interface]
+    - [x] Web App
     - [x] Linux terminal
 
-## Inspiration
-- https://passwordsgenerator.net/plus/
-- https://passwordsgenerator.net/
-
-### How to build from source code
+### How to build from source code (for main.py)
 1. Install Python IDLE
 2. Open with "Edit with IDLE"
 3. Select "Run Module" from Run menu
