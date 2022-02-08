@@ -30,12 +30,11 @@
     <main class="container">
 
         <section class="py-5">
-            <div class="row">
-                <div class="col-auto text-start">
-                    <h1 class="TheTitle" onclick="window.location.reload();">🔑 P<span class="Vowel">a</span>ssw<span
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h1 class="TheTitle" onclick="window.location.reload();">🔑P<span class="Vowel">a</span>ssw<span
                             class="Vowel">o</span>rdG<span class="Vowel">e</span>n<span class="Vowel">e</span>r<span
-                            class="Vowel">a</span>t<span class="Vowel">o</span>r
-                    </h1>
+                            class="Vowel">a</span>t<span class="Vowel">o</span>r</h1>
                 </div>
             </div>
         </section>
@@ -55,20 +54,35 @@
                         </button>
                     </div>
 
-                    <div class="w-100 mt-3">
+                    <div class="PsswrdOptions mt-4">
+                        <label for="psswrd_limit" class="PsswrdOptionBasic">
+                            <input class="PsswrdOptionBasic__range" name="psswrd_limit" id="psswrd_limit" type="range"
+                                value="50" min="4" max="300" oninput="this.nextElementSibling.value = this.value">
+                            <!-- <output>50</output> -->
+                            <p class="lead mt-2 mb-0">
+                                Password length is now 🎯 set at <code>50</code><br>
+                            </p>
+                            <p class="text-secondary mb-0">
+                                ↔️ move the range slider to set a preferred value
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="w-100 mt-3 text-center">
                         <button class="btn btn-lg btn-primary" onclick="generatePsswrd()">Generate</button>
                     </div>
 
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <div class="pt-5">
+                            <div class="pt-5 pb-2">
                                 <h3>Password Options</h3>
                                 <h4 class="text-secondary">Use options to customize password generation</h4>
-                                <small>(Coming Soon - below features still in-development)
+                                <small>🚨 <span style="font-family: monospace;">Coming Soon - below features still
+                                        in-development</span>
                                 </small>
                             </div>
 
-                            <div class="PsswrdOptions">
+                            <!-- <div class="PsswrdOptions">
                                 <label for="psswrd_limit" class="PsswrdOption">
                                     <input class="PsswrdOption__inputbox--range" name="psswrd_limit" id="psswrd_limit"
                                         type="range" value="50" min="4" max="50"
@@ -79,14 +93,14 @@
                                         &nbsp;(recommended character length is 50)
                                     </span>
                                 </label>
-                            </div>
+                            </div> -->
                             <div class="PsswrdOptions">
                                 <label for="psswrd_numbers" class="PsswrdOption">
                                     <input type="checkbox" name="psswrd_numbers" class="PsswrdOption__inputbox"
                                         id="psswrd_numbers">
                                     <span class="PsswrdOption__label">Include Numbers</span>
                                     <span id="" class="PsswrdOption__helper">
-                                        &nbsp;(0-9)
+                                        &nbsp; 0️⃣ ↔️ 9️⃣
                                     </span>
                                     <span class="PsswrdOption__label--checkbox">
                                         <span class="PsswrdOption__checkmark"></span>
@@ -209,6 +223,7 @@
         </section>
 
         <section class="my-5">
+            <h5>🤔 Passwords Q & A</h5>
             <article>
                 <h6>How to create a simple, strong, easy to remember password?</h6>
                 <p>Here is how to create a strong password, "#Psswrd@2022". This example format allows you to choose one
@@ -229,7 +244,7 @@
 
 </body>
 
-<footer class="text-center">
+<footer class="text-center pt-3">
     <p class="m-0">psswrdgnrtr.com</p>
     <p>
         A micro project by <a href="https://narenkram.com">narenkram</a>
