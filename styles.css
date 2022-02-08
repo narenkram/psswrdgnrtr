@@ -60,6 +60,12 @@
     }
 }
 
+.TheTitle {
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
 .Vowel {
     width: 21.5px;
     color: tomato;
