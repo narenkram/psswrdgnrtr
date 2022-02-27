@@ -78,8 +78,9 @@
 
 .TheTitle {
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     position: relative;
+    /* transform: scale(0.7) */
 }
 
 .TheTitle::before {
@@ -256,12 +257,6 @@
     border-color: tomato;
 }
 
-
-.PsswrdOption__label {}
-
-.PsswrdOption__label--helper {}
-
-
 .Psswrd__copy {
     position: relative;
     display: inline-block;
@@ -341,4 +336,9 @@ kbd {
 
 a {
     text-decoration: none;
+}
+
+.container {
+    min-width: 425px;
+    /* max-width: 960px; */
 }
