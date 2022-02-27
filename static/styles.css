@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     min-width: fit-content;
+    overflow-x: hidden;
 }
 
 
@@ -347,6 +348,4 @@ a {
 
 .container {
     min-width: 425px;
-    overflow-x: hidden;
-    /* max-width: 960px; */
 }
