@@ -1,3 +1,10 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    min-width: fit-content;
+}
+
+
 @media (prefers-color-scheme: light) {
 
     html,
