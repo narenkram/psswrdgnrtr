@@ -1,18 +1,7 @@
 var password = document.getElementById("password");
 var psswrd_range_slider;
 var psswrd_limit;
-
-/* Function to generate combination of password */
-function generatePsswrd() {
-    var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    passwordLength = 50;
-    var password = "";
-    for (var i = 0; i <= passwordLength; i++) {
-        var randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber + 1);
-    }
-    document.getElementById("password").value = password;
-}
+var passwordLength = 50;
 
 
 window.onload = (event) => {
@@ -24,12 +13,25 @@ window.onload = (event) => {
     psswrd_range_slider.addEventListener("input", OutputPsswrdLimit);
     function OutputPsswrdLimit() {
         psswrd_limit.innerHTML = psswrd_range_slider.value;
+        passwordLength = psswrd_range_slider.value;
     }
 
 
-    generatePsswrd();
+    generatePsswrd(passwordLength);
 
 };
+
+/* Function to generate combination of password */
+function generatePsswrd(passwordLength) {
+    console.log(passwordLength);
+    var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var password = "";
+    for (var i = 0; i <= passwordLength; i++) {
+        var randomNumber = Math.floor(Math.random() * chars.length);
+        password += chars.substring(randomNumber, randomNumber + 1);
+    }
+    document.getElementById("password").value = password;
+}
 
 
 function copyPsswrd() {
