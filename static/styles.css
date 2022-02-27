@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     min-width: fit-content;
     overflow-x: hidden;
+    zoom: 100%;
 }
 
 
@@ -88,7 +89,6 @@ body, html {
     cursor: pointer;
     display: inline-flex;
     position: relative;
-    /* transform: scale(0.7) */
 }
 
 .TheTitle::before {
@@ -347,4 +347,6 @@ a {
     text-decoration: none;
 }
 
-.container {}
+.container {
+    min-width: 425px;
+}
