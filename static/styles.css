@@ -206,6 +206,7 @@ body, html {
     }
 }
 
+
 .Psswrd {
     position: relative;
     display: flex;
@@ -346,6 +347,4 @@ a {
     text-decoration: none;
 }
 
-.container {
-    min-width: 425px;
-}
+.container {}
