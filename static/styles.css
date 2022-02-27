@@ -340,5 +340,6 @@ a {
 
 .container {
     min-width: 425px;
+    overflow-x: hidden;
     /* max-width: 960px; */
 }
