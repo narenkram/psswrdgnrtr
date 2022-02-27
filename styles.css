@@ -210,6 +210,11 @@
     padding: 16px;
     text-align: center;
     margin-right: 14px;
+    /* overflow: hidden;
+    word-break: break-all;
+    display: table-cell;
+    vertical-align: middle;  these only work for textarea*/
+    font-size: x-large;
 }
 
 .Psswrd__copy {

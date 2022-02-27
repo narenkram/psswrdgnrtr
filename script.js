@@ -32,20 +32,20 @@ function generatePsswrd(passwordLength) {
     }
     document.getElementById("password").value = password;
 
-
-    if (passwordLength >= 300) {
-        document.getElementById("password").style.fontSize = "6px";
-    } else if (passwordLength >= 250) {
-        document.getElementById("password").style.fontSize = "8px";
-    } else if (passwordLength >= 200) {
-        document.getElementById("password").style.fontSize = "10px";
-    } else if (passwordLength >= 150) {
-        document.getElementById("password").style.fontSize = "12px";
-    } else if (passwordLength >= 100) {
-        document.getElementById("password").style.fontSize = "14px";
-    } else if (passwordLength >= 50) {
-        document.getElementById("password").style.fontSize = "16px";
-    }
+    // just in-case if i use <textarea> in HTML
+    // if (passwordLength >= 300) {
+    //     document.getElementById("password").style.fontSize = "12px";
+    // } else if (passwordLength >= 250) {
+    //     document.getElementById("password").style.fontSize = "14px";
+    // } else if (passwordLength >= 200) {
+    //     document.getElementById("password").style.fontSize = "16px";
+    // } else if (passwordLength >= 150) {
+    //     document.getElementById("password").style.fontSize = "18px";
+    // } else if (passwordLength >= 100) {
+    //     document.getElementById("password").style.fontSize = "20px";
+    // } else if (passwordLength >= 50) {
+    //     document.getElementById("password").style.fontSize = "22px";
+    // }
 }
 
 
