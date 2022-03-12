@@ -342,6 +342,13 @@ body, html {
     cursor: pointer;
 }
 
+.Spacer {
+    width: 100%;
+    height: 0px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
 
 code a {
     text-decoration: none;
