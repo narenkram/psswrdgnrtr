@@ -99,6 +99,10 @@ body, html {
     font-size: xx-small;
 }
 
+.Vowel {
+    color: tomato;
+}
+
 @media (min-width: 0px) and (max-width: 500px) {
     .Vowel {
         width: 0;
@@ -115,9 +119,10 @@ body, html {
 
 }
 
-@media (min-width: 501px) and (max-width: 1400px) {
+@media (min-width: 501px) and (max-width: 9999px) {
     .Vowel {
         width: 21.5px;
+        color: tomato;
         animation-name: LoopText;
         animation-duration: 14s;
         animation-iteration-count: infinite;
