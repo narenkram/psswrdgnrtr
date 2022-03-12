@@ -7,11 +7,10 @@ Free Password Generator, live at 🎯 [psswrdgnrtr.com](https://www.github.com)
     - [ ] ASCII Characters
     - [ ] Numbers
     - [ ] Symbols
-    - [ ] Custom limit character
+    - [x] Custom limit character
 - [ ] Advanced Options
     - [ ] No Similar Characters
     - [ ] No Duplicate Characters
-    - [ ] No Sequential Characters
     - [ ] Save My Preference
 - [ ] Cross Platform Support
     - [x] Web App
