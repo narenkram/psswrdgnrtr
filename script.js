@@ -24,8 +24,33 @@ window.onload = (event) => {
 /* Function to generate combination of password */
 function generatePsswrd(passwordLength) {
     console.log(passwordLength);
-    var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var chars;
+    var default_chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var custom_chars;
     var password = "";
+    var psswrd_lowercase = "abcdefghijklmnopqrstuvwxyz";
+    var psswrd_numbers = "0123456789";
+    var psswrd_uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var psswrd_symbols = "!@#$%^&*()";
+
+
+    // Need event listenser to set checked and unchecked atrribute.
+
+    var include_lowercase = document.getElementById("psswrd_lowercase").checked;
+    var include_uppercase = document.getElementById("psswrd_uppercase").checked;
+    var include_numbers = document.getElementById("psswrd_numbers").checked;
+    var include_symbols = document.getElementById("psswrd_symbols").checked;
+
+    if ((include_lowercase = true) && (include_uppercase = true) && (include_numbers = true) && (include_symbols = true)) {
+        chars = default_chars;
+    }
+    else () => {
+        // return custom_chars;
+        return default_chars;
+    }
+
+
+
     for (var i = 0; i <= passwordLength; i++) {
         var randomNumber = Math.floor(Math.random() * chars.length);
         password += chars.substring(randomNumber, randomNumber + 1);
