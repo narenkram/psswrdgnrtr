@@ -99,112 +99,132 @@ body, html {
     font-size: xx-small;
 }
 
-.Vowel {
-    width: 21.5px;
-    color: tomato;
-    animation-name: LoopText;
-    animation-duration: 14s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    display: inline-block;
-    opacity: 1;
-    animation-direction: reverse;
-}
-
-.TheTitle::after {
-    content: ".com";
-    animation-name: LoopTextURL;
-    animation-duration: 14s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    opacity: 0;
-    animation-direction: reverse;
-    position: absolute;
-}
-
-@keyframes LoopText {
-    0% {
-        width: 21.5px;
-        opacity: 1;
-        display: inline-block;
-    }
-
-    15% {
-        width: 0px;
-        opacity: 0;
+@media (min-width: 0px) and (max-width: 500px) {
+    .Vowel {
+        width: 0;
+        color: tomato;
         display: none;
     }
 
-    25% {
-        width: 0px;
-        opacity: 0;
-        display: none;
-    }
-
-    50% {
-        width: 0px;
-        opacity: 0;
-        display: none;
-    }
-
-    65% {
-        width: 0px;
-        opacity: 0;
-        display: none;
-    }
-
-    75% {
-        width: 21.5px;
-        opacity: 1;
-        display: inline-block;
-    }
-
-    100% {
-        width: 21.5px;
-        opacity: 1;
-        display: inline-block;
-    }
-}
-
-@keyframes LoopTextURL {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-
-    15% {
-        display: none;
-        opacity: 0;
-    }
-
-    25% {
+    .TheTitle::after {
+        content: ".com";
         opacity: 1;
         display: inline-block;
         position: initial;
     }
 
-    50% {
-        opacity: 1;
+}
+
+@media (min-width: 501px) and (max-width: 1400px) {
+    .Vowel {
+        width: 21.5px;
+        animation-name: LoopText;
+        animation-duration: 14s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
         display: inline-block;
-        position: initial;
+        opacity: 1;
+        animation-direction: reverse;
     }
 
-    65% {
-        display: none;
+    .TheTitle::after {
+        content: ".com";
+        display: inline-block;
+        position: absolute;
+        animation-name: LoopTextURL;
+        animation-duration: 14s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
         opacity: 0;
+        animation-direction: reverse;
     }
 
-    75% {
-        display: none;
-        opacity: 0;
+    @keyframes LoopText {
+        0% {
+            width: 21.5px;
+            opacity: 1;
+            display: inline-block;
+        }
+
+        15% {
+            width: 0px;
+            opacity: 0;
+            display: none;
+        }
+
+        25% {
+            width: 0px;
+            opacity: 0;
+            display: none;
+        }
+
+        50% {
+            width: 0px;
+            opacity: 0;
+            display: none;
+        }
+
+        65% {
+            width: 0px;
+            opacity: 0;
+            display: none;
+        }
+
+        75% {
+            width: 21.5px;
+            opacity: 1;
+            display: inline-block;
+        }
+
+        100% {
+            width: 21.5px;
+            opacity: 1;
+            display: inline-block;
+        }
     }
 
-    100% {
-        display: none;
-        opacity: 0;
+    @keyframes LoopTextURL {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+
+
+        15% {
+            display: none;
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+            display: inline-block;
+            position: initial;
+        }
+
+        50% {
+            opacity: 1;
+            display: inline-block;
+            position: initial;
+        }
+
+        65% {
+            display: none;
+            opacity: 0;
+        }
+
+        75% {
+            display: none;
+            opacity: 0;
+        }
+
+        100% {
+            display: none;
+            opacity: 0;
+        }
     }
 }
+
+
 
 
 .Psswrd {
@@ -345,8 +365,4 @@ kbd {
 
 a {
     text-decoration: none;
-}
-
-.container {
-    min-width: 425px;
 }
