@@ -1,9 +1,10 @@
+// Variables
 var password = document.getElementById("password");
 var psswrd_range_slider;
 var psswrd_limit;
 var passwordLength = 50;
 
-
+// Event Listeners
 window.onload = (event) => {
     console.log('hello world');
     psswrd_range_slider = document.getElementById("psswrd_range_slider");
@@ -21,59 +22,105 @@ window.onload = (event) => {
 
 };
 
-/* Function to generate combination of password */
-function generatePsswrd(passwordLength) {
+// Function to generate password
+function generatePsswrd(passwordLength, options = {}) {
     console.log(passwordLength);
-    var chars;
+    var chars = '';
     var default_chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var custom_chars;
+    var custom_chars = '';
     var password = "";
     var psswrd_lowercase = "abcdefghijklmnopqrstuvwxyz";
     var psswrd_numbers = "0123456789";
     var psswrd_uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var psswrd_symbols = "!@#$%^&*()";
 
+    // Set default values for options
+    options = {
+        include_lowercase: true,
+        include_uppercase: true,
+        include_numbers: true,
+        include_symbols: true,
+        start_with_letter_only: false,
+        no_similar_characters: true,
+        no_duplicate_characters: true,
+        ...options
+    };
 
-    // Need event listenser to set checked and unchecked atrribute.
 
-    var include_lowercase = document.getElementById("psswrd_lowercase").checked;
-    var include_uppercase = document.getElementById("psswrd_uppercase").checked;
-    var include_numbers = document.getElementById("psswrd_numbers").checked;
-    var include_symbols = document.getElementById("psswrd_symbols").checked;
+    // Update options based on user's input
+    options.include_lowercase = document.getElementById("psswrd_lowercase").checked;
+    options.include_uppercase = document.getElementById("psswrd_uppercase").checked;
+    options.include_numbers = document.getElementById("psswrd_numbers").checked;
+    options.include_symbols = document.getElementById("psswrd_symbols").checked;
+    options.start_with_letter_only = document.getElementById("psswrd_letter_start").checked;
+    options.no_similar_characters = document.getElementById("psswrd_no_similar").checked;
+    options.no_duplicate_characters = document.getElementById("psswrd_no_duplicate").checked;
 
-    if ((include_lowercase = true) && (include_uppercase = true) && (include_numbers = true) && (include_symbols = true)) {
+    if (options.include_lowercase) {
+        custom_chars += psswrd_lowercase;
+    }
+    if (options.include_uppercase) {
+        custom_chars += psswrd_uppercase;
+    }
+    if (options.include_numbers) {
+        custom_chars += psswrd_numbers;
+    }
+    if (options.include_symbols) {
+        custom_chars += psswrd_symbols;
+    }
+
+    // Add first letter if startWithLetter option is true
+    if (options.start_with_letter_only) {
+        chars = psswrd_lowercase + psswrd_uppercase;
+        var firstLetterRandomNumber = Math.floor(Math.random() * psswrd_uppercase.length);
+        password += psswrd_uppercase.charAt(firstLetterRandomNumber);
+    }
+
+    // Remove similar characters
+    if (options.no_similar_characters) {
+        custom_chars = custom_chars.replace(/[iIlLoO0]/g, "");
+        chars = chars.replace(/[iIlLoO0]/g, "");
+    }
+
+    // Remove duplicates
+    if (options.no_duplicate_characters) {
+        custom_chars = [...new Set(custom_chars)].join("");
+        chars = [...new Set(chars)].join("");
+    }
+
+    // Use default characters if no custom characters are selected
+    if (custom_chars.length > 0) {
+        chars += custom_chars;
+    } else {
         chars = default_chars;
     }
-    else () => {
-        // return custom_chars;
-        return default_chars;
-    }
 
-
-
-    for (var i = 0; i <= passwordLength; i++) {
+    // Generate password
+    for (var i = 0; i < passwordLength; i++) {
         var randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber + 1);
+        password += chars.charAt(randomNumber);
     }
+
     document.getElementById("password").value = password;
 
-    // just in-case if i use <textarea> in HTML
-    // if (passwordLength >= 300) {
-    //     document.getElementById("password").style.fontSize = "12px";
-    // } else if (passwordLength >= 250) {
-    //     document.getElementById("password").style.fontSize = "14px";
-    // } else if (passwordLength >= 200) {
-    //     document.getElementById("password").style.fontSize = "16px";
-    // } else if (passwordLength >= 150) {
-    //     document.getElementById("password").style.fontSize = "18px";
-    // } else if (passwordLength >= 100) {
-    //     document.getElementById("password").style.fontSize = "20px";
-    // } else if (passwordLength >= 50) {
-    //     document.getElementById("password").style.fontSize = "22px";
-    // }
+    var startWithLetterOnlyCheckbox = document.getElementById("psswrd_letter_start");
+    var psswrdLowercaseLabel = document.querySelector("label[for='psswrd_lowercase']");
+    var psswrdUppercaseLabel = document.querySelector("label[for='psswrd_uppercase']");
+
+    startWithLetterOnlyCheckbox.addEventListener("change", function () {
+        if (startWithLetterOnlyCheckbox.checked) {
+            psswrdLowercaseLabel.style.color = "red";
+            psswrdUppercaseLabel.style.color = "red";
+        } else {
+            psswrdLowercaseLabel.style.color = "";
+            psswrdUppercaseLabel.style.color = "";
+        }
+    });
+
 }
 
 
+// Allowing user to copy password to clipboard
 function copyPsswrd() {
     var copyText = document.getElementById("password");
     copyText.select();
@@ -84,6 +131,7 @@ function copyPsswrd() {
     tooltip.innerHTML = "Copied";
 }
 
+// Function to change tooltip text
 function outFunc() {
     var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copy to clipboard";
