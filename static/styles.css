@@ -92,11 +92,6 @@ body, html {
 }
 
 .TheTitle::before {
-    content: "beta";
-    position: absolute;
-    top: 10px;
-    left: 4px;
-    font-size: xx-small;
 }
 
 .Vowel {
