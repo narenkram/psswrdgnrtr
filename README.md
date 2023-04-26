@@ -5,13 +5,13 @@ Free Password Generator, live at 🎯 [psswrdgnrtr.com](https://psswrdgnrtr.com/
 - [x] Minimal Features
     - [x] Generate mixed characters password
     - [x] Custom limit character
-    - [ ] Include Numbers
-    - [ ] Include Symbols
-    - [ ] Include Uppercase & Lowercase
-    - [ ] Start with a Letter
+    - [x] Include Numbers
+    - [x] Include Symbols
+    - [x] Include Uppercase & Lowercase
+    - [x] Start with a Letter
 - [ ] Advanced Options
-    - [ ] No Similar Characters
-    - [ ] No Duplicate Characters
+    - [x] No Similar Characters
+    - [x] No Duplicate Characters
     - [ ] Save My Preference
 
 ### To-Do 2
