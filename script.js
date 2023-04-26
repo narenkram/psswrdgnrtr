@@ -103,19 +103,38 @@ function generatePsswrd(passwordLength, options = {}) {
 
     document.getElementById("password").value = password;
 
-    var startWithLetterOnlyCheckbox = document.getElementById("psswrd_letter_start");
-    var psswrdLowercaseLabel = document.querySelector("label[for='psswrd_lowercase']");
-    var psswrdUppercaseLabel = document.querySelector("label[for='psswrd_uppercase']");
+    // Function to handle start_with_letter_only option
+    function handleStartWithLetterOnly() {
+        var start_with_letter_only = document.getElementById("psswrd_letter_start");
+        var include_lowercase = document.getElementById("psswrd_lowercase");
+        var include_uppercase = document.getElementById("psswrd_uppercase");
 
-    startWithLetterOnlyCheckbox.addEventListener("change", function () {
-        if (startWithLetterOnlyCheckbox.checked) {
-            psswrdLowercaseLabel.style.color = "red";
-            psswrdUppercaseLabel.style.color = "red";
+        if (start_with_letter_only.checked) {
+            // Disable include_lowercase and include_uppercase options
+            include_lowercase.checked = false;
+            include_uppercase.checked = false;
+            include_lowercase.disabled = true;
+            include_uppercase.disabled = true;
+
+            // Change color to red
+            include_lowercase.parentNode.style.color = "red";
+            include_uppercase.parentNode.style.color = "red";
         } else {
-            psswrdLowercaseLabel.style.color = "";
-            psswrdUppercaseLabel.style.color = "";
+            // Enable include_lowercase and include_uppercase options
+            include_lowercase.checked = true;
+            include_uppercase.checked = true;
+            include_lowercase.disabled = false;
+            include_uppercase.disabled = false;
+
+            // Reset color to default
+            include_lowercase.parentNode.style.color = "black";
+            include_uppercase.parentNode.style.color = "black";
         }
-    });
+    }
+
+    // Attach event listener to start_with_letter_only option
+    document.getElementById("psswrd_letter_start").addEventListener("change", handleStartWithLetterOnly);
+
 
 }
 
