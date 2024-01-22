@@ -1,5 +1,5 @@
 # psswrdgnrtr
-Free Password Generator, live at 🎯 [pwdgen.narendra.design](https://pwdgen.narendra.design/) 
+Free Password Generator, live at 🎯 [narenkram.com/password-generator](https://narenkram.com/password-generator/) 
 
 ### To-Do 1
 - [x] Minimal Features
